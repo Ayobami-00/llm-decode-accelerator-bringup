@@ -1,0 +1,16 @@
+schema_version: 1
+architecture: emberx-v0
+devices:
+  - id: 0
+    memory:
+      sram_bytes: 1048576
+      allocation_alignment_bytes: 48
+    supported_dtypes: [float32]
+    engines:
+      matrix: 1
+      vector: 1
+      dma: 1
+    topology:
+      coordinates: [0, 0]
+fabric:
+  links: []

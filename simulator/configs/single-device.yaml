@@ -1,0 +1,21 @@
+# Functional bring-up configuration; see docs/design/v0-contract.md.
+# Capacity and alignment are experimental settings, not hardware measurements.
+schema_version: 1
+architecture: emberx-v0
+
+devices:
+  - id: 0
+    memory:
+      sram_bytes: 1048576 # 1 MiB
+      allocation_alignment_bytes: 64
+    supported_dtypes:
+      - float32
+    engines:
+      matrix: 1
+      vector: 1
+      dma: 1
+    topology:
+      coordinates: [0, 0]
+
+fabric:
+  links: []
