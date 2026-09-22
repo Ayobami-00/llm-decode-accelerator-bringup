@@ -10,7 +10,7 @@ struct Checks {
     void expect(bool condition, std::string_view description) {
         if (!condition) {
             std::cerr << "FAIL: " << description << '\n';
-            ++failures;
+            failures++;
         }
     }
 

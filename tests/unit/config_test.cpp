@@ -49,7 +49,7 @@ int main() {
     auto many = valid_config();
     const auto prototype = many.devices.front();
     many.devices.clear();
-    for (std::uint32_t i = 0; i < emberx::kMaxDevices; ++i) {
+    for (std::uint32_t i = 0; i < emberx::kMaxDevices; i++) {
         auto device = prototype;
         device.id = i;
         device.topology.coordinates = {i, 0};

@@ -82,7 +82,7 @@ int main()
 
     changed = tensor;
     changed.rank = EMBERX_MAX_TENSOR_RANK;
-    for (std::uint32_t i = 0; i < changed.rank; ++i)
+    for (std::uint32_t i = 0; i < changed.rank; i++)
     {
         changed.shape[i] = 1;
         changed.strides[i] = 1;

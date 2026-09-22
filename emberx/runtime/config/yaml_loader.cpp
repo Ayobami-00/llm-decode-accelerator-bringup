@@ -105,7 +105,7 @@ namespace emberx
                 invalid("devices", "expected between 1 and 256 devices");
             config.devices.reserve(devices.size());
 
-            for (std::size_t i = 0; i < devices.size(); ++i)
+            for (std::size_t i = 0; i < devices.size(); i++)
             {
                 const auto node = devices[i];
                 const std::string path = "devices[" + std::to_string(i) + "]";
@@ -145,7 +145,7 @@ namespace emberx
                 sequence(coordinates, path + ".topology.coordinates");
                 if (coordinates.size() != 2)
                     invalid(path + ".topology.coordinates", "expected [x, y]");
-                for (std::size_t axis = 0; axis < 2; ++axis)
+                for (std::size_t axis = 0; axis < 2; axis++)
                     device.topology.coordinates[axis] = unsigned_integer<std::uint32_t>(
                         coordinates[axis],
                         path + ".topology.coordinates[" + std::to_string(axis) + "]");

@@ -27,7 +27,7 @@ ValidationError validate_tensor(const EmberxTensorDesc& tensor,
         return fail(EMBERX_INVALID_ARGUMENT, "byte_offset", "offset exceeds allocation size");
 
     // Zero-sized tensors access no elements; their strides are ignored.
-    for (std::uint32_t i = 0; i < tensor.rank; ++i) {
+    for (std::uint32_t i = 0; i < tensor.rank; i++) {
         if (tensor.shape[i] == 0)
             return std::nullopt;
     }
